@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    background-color: var(--backgroundColor1);
+    font-family: var(--fuentePrincipal);
+}
+/*1rem = 10px*/
+a{
+    text-decoration: none;
+    
+}
+img{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--amarillo);
+    margin: 4rem 0;
+}
+h2{
+    text-align: center;
+    color: var(--amarillo);
+    margin: 3rem 0;
+    font-size: 3rem;
+}
+
+:root{
+    --backgroundColor1: #9C27B0;
+    --backgroundColor2: #89119D;
+    --amarillo:#FFCE00;
+    --blanco:#FFFFFF;
+    --fuentePrincipal: 'Staatliches', cursive;
+    --fuenteSecundaria: Arial, Helvetica, sans-serif;
+}
+/*HEADER*/
+.header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+     
+}
+.logo{
+    margin: 3rem auto;
+}
+/*NAVEGACION*/
+.navegacion{
+    width: 100%;
+    background-color: var(--backgroundColor2);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:6rem;
+}
+.navegacion-content{
+    display: flex;
+    gap: 2rem;
+}
+.navegacion a{
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--blanco);
+}
+
+.navegacion .activo,
+.navegacion a:hover{
+    color: var(--amarillo);
+}
+
+/*MAIN*/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    
+}
+.galeria-contenedor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.producto{
+    background-color: var(--backgroundColor2);
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.producto-info{
+    margin-top: 1.5rem;
+}
+.producto-nombre{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--blanco);
+}
+.producto-precio{
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--amarillo);
+    margin: 1rem 0;
+}
+.productoGrande1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.productoGrande2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+@media (min-width: 770px) {
+    .galeria-contenedor{
+        grid-template-columns: repeat(3,1fr);  
+    }
+    .productoGrande1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .productoGrande2{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+}
+
+/*NOSOTROS PAGINA*/
+/*NOSOTROS*/
+.nosotros .nosotros-contenido{
+    padding: 0.5rem;
+    font-family: var(--fuenteSecundaria);
+    color: var(--blanco);
+    line-height: 1.5;
+    font-size: 2rem;
+    
+}
+@media (min-width: 770px) {
+    .nosotros{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:2rem;
+    }
+    .nosotros-contenido{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end:2;
+    }
+}
+
+/*OPCIONES*/
+.opciones-contenedor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+    margin-bottom:3rem;
+}
+.opcion .opcion-info{
+    text-align: center;
+}
+.opciones-contenedor .opcion-nombre{
+    color: var(--amarillo);
+    text-align: center;
+    font-size: 2.5rem;
+}
+.opciones-contenedor .opcion-precio{
+    color: var(--blanco);
+    font-family: var(--fuenteSecundaria);
+}
+@media (min-width: 770px) {
+    .opciones-contenedor{
+        display: flex;
+    }
+}
+
+/*FOOTER*/
+.footer{
+    background-color: var(--backgroundColor2);
+    padding:4rem;
+    margin-top: 3rem;
+}
+.footer .text-footer{
+    text-align: center;
+    color: var(--blanco);
+    font-size: 2.2rem;
+}
+
+/*PAGINA TIENDA*/
+/*COMPRA*/
+.compra-info{
+    margin: 1rem 0;
+}
+.compra-opciones{
+    margin: 3rem 0;
+}
+.compra-info p{
+    color:var(--blanco);
+    font-family: var(--fuenteSecundaria);
+    line-height:1.2;
+    font-size: 2rem;
+}
+
+
+.formulario-opciones{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.btn-number,
+.formulario-campo{
+    padding: 1rem;
+    background-color: transparent;
+    color: var(--blanco);
+    border: 1rem var(--backgroundColor2) solid;
+    font-size: 2rem;
+}
+.btn-agregar{
+    padding: 2rem;
+    background-color: var(--amarillo);
+    font-size: 2rem;
+    border: none;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    cursor: pointer;
+}
+@media (min-width: 770px) {
+    .compra{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+}
